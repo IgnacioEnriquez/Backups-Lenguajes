@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo post</title>
+
+    <style>
+
+        .form {
+            width: 50%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .form-field {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+
+        }
+
+        .form-field label {
+            display: inline-block;
+            width: 20%;
+
+            color: rgba(0, 0, 0, 0.5);
+
+            position: absolute;
+            z-index: 0;
+        }
+
+        .form-field input,
+        .form-field input[type="text"],
+        .form-field input[type="number"] {
+            background: none;
+            border: 0;
+            outline: none;
+
+            width: 80%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+            color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+
+            z-index: 9;
+
+            text-align: end;
+        }
+
+        .form-field input[type="text"]:focus,
+        .form-field input[type="number"]:focus
+         {
+            transition: 0.2s;
+            padding: 20px 0;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        
+        .form-field input[type="text"]:focus+label,
+        .form-field input[type="number"]:focus+label {
+            transition: 0.2s;
+            font-size: 12px;
+        }
+
+        .form-field input[type="checkbox"] {
+
+            border-bottom-color: aqua;
+
+        }
+
+        .form-field input[type="checkbox"]:focus+label {
+            transition: 0;
+            font-size: inherit;
+        }
+
+        .form-field input[type="checkbox"]:focus {
+            transition: 0;
+            
+            padding: 5px;
+            margin-top: 0;
+            font-size: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <form action="" class="form">
+
+        <div class="form-field">
+            <input type="text" />
+            <label>Nombre</label>
+        </div>
+
+        <div class="form-field">
+            <input type="number" />
+            <label>Edad</label>
+        </div>
+
+        <div class="form-field">
+            <input type="checkbox" />
+            <label>¿Es usted un zombie?</label>
+        </div>
+
+        <div class="form-field">
+            <input type="date" />
+            <label>Fecha</label>
+        </div>
+    </form>
+
+</body>
+</html>

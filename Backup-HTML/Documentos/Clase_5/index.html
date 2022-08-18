@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Clase 05</h1>
+    </header>
+    <main>
+      <h2>Display</h2>
+      <p class="linea">
+        Soy un elemento de bloque. Me comporto como elemento de línea
+      </p>
+      <span class="bloque"
+        >Soy un elemento de línea. Me comporto como elemento de bloque
+      </span>
+      <form action="">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre" class="bloque" />
+      </form>
+      <div class="cuadrado"></div>
+      <h3>Flexbox</h3>
+      <div class="flex">
+        <div class="elemento"></div>
+        <div class="elemento"></div>
+        <div class="elemento"></div>
+      </div>
+      <h2>Iframe</h2>
+      <p>
+        La posibilidad de incorporar una porción de contenido de otro sitio en
+        nuestra página
+      </p>
+      <h3>Youtube</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/kN1XP-Bef7w"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <h3>Google Maps</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0701116783302!2d-58.37812478524323!3d-34.60238856493381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacc473596c3%3A0x568d6d5f7f1f535d!2sEducaci%C3%B3nIT!5e0!3m2!1ses-419!2sar!4v1659119095986!5m2!1ses-419!2sar"
+        width="400"
+        height="300"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+      <h2>Multimedia</h2>
+      <h3>Audio</h3>
+      <audio src="assets/audio/HTML5.mp3" controls>
+        <p>Este contenido no es soportado por tu navegador</p>
+      </audio>
+      <h3>Video</h3>
+      <video width="560" controls>
+        <source src="assets/video/HTML5.mp4" type="video/mp4" />
+        <source src="assets/video/HTML5.webm" type="video/webm" />
+        <p>Este contenido no es soportado por tu navegador</p>
+      </video>
+    </main>
+    <footer>
+      <span>&copy; Copyright</span>
+    </footer>
+  </body>
+</html>

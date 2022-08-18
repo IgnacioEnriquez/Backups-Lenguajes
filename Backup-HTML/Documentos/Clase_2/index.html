@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 02</title>
+
+</head>
+
+<style>
+    /*   Aplicacion de tamaños(Ancho,alto,tamaño de letra,grosor,etc)
+    Tipos de medidad :
+    -> Absolutas : Son aquellas que una vez declaradas nunca van a cambiar bajo ningun concepto
+     -->Pixel(px) 
+     
+    -> Relativas : Son aquellas que calculan el tamaño en base a la regla correspondiente.
+     --> Porcentaje (%) : Tamaño = ancho/alto del contenedor padre por el porcentaje declarado
+     --> Em
+     --> En
+
+
+*/
+
+#imagenRelativa
+{
+    border: 1px solid black;
+    width: 500px;
+
+}
+    #tamanioImagen {
+        width: 50%;
+        /*Permite cambiar el alto de los elementos - El navegador lo calcula de forma automatica*/
+
+    }
+
+body
+{
+    border: 1px solid black;
+}
+
+/* Posicionado de Elementos con Float
+ 
+   Los elementos de texto se ven afectados(span,p) 
+
+*/
+
+.main
+{
+    background-color: cadetblue;
+    color:aliceblue;
+    width: 65%;
+    float : left;
+}
+
+aside
+{
+    background-color: crimsom;
+    color: blanchedalmond;
+    width: 30%;
+    float : right;
+}
+</style>
+
+<body>
+
+    <header>
+        <h1>Clase 02</h1>
+        <a href="">Link</a>
+    </header>
+
+    <main class="main">
+
+        <section>
+            <h2>Etiquetas Semanticas</h2>
+            <!-- Acomoda el texto - Permite organizar el codigo - Ayuda al posicionamiento  -->
+            <h3>Indispensables :</h3>
+            <ul>
+                <li>Header</li>
+                <!-- Todo lo referente a la identificacion de la pagina  - h1, logo, elementos de identificacion de usuario, dentro del head 
+            es muy  comun encontrar una etiqueta Nav,esta contiene la navegacion principal del sitio-->
+                <li>Nav</li> <!-- Contiene una navegacion(etiqueta "a") == Links a otros lugares,redirecciones -->
+                <li>Main</li>
+                <!-- W3C = Contiene el contenido principal de la pagina, no debe haber mas de un Main por pagina, de que va la pagina 
+        no puede haber mas de una etiqueta Main por pagina.
+        WHATG = Main solo hace referencia al contenido principal de lo que se esta hablando, y DEBE tenerlo-->
+                <li>Footer</li> <!-- Legales : Quien se hace cargo del contenido, derechos de sitios externos y etc  -->
+            </ul>
+
+            <h3>Recurrentes : </h3> <!-- Dependiendo la pagina -->
+
+            <ul>
+                <li>Section</li>
+                <!-- Seccion de contenido. Permite agrupar la informacion que se encuentra en el main , no puede ser separada del main -->
+                <li>Article</li> <!-- Seccion de contenido. Contiene informacion que puede ser sacada de contexto -->
+                <li>Aside</li>
+                <!-- Contiene informacion relacionada con el contenido principal que puede no estar, porque ya esta en la pagina,
+        ventajas de usabilidad -->
+                <li>Figure</li> <!-- Permite vincular semanticamente una imagen con un texto (figcaption) -->
+            </ul>
+
+            <section>
+                <h2>Imagenes</h2>
+
+                <h3>Rutas :</h3>
+                <!-- El camino que tiene que hacer el navegador para encontrar el elemento requerido -->
+                <ul>
+                    <li>Absolutas</li>
+                    <!-- La descripcion o el camino completo hasta el elemento, se utilizan para elementos que se encuentran fuera de
+            nuestro proyecto -->
+                    <li>Relativas</li>
+                    <!-- Rutas que se crean de forma dinamica teniendo en cuenta el documento en que se declaran y su relacion con el
+            root del proyecto y la ubicacion del elemento requerido, se utilizan para elementos que se encuentran dentro de nuestro proyecto -->
+                </ul>
+
+                <section id="imagenRelativa">
+                    <h4>Imagen por ruta relativa</h4>
+                    <img src="./images/Cogedordebrasileros.jpg" alt="HTML5" width="150px">
+                </section>    
+
+            <!-- 
+            src = la ruta del archivo 
+            alt = Texto que se muestra cuando no esta el archivo,es importante para la accesibilidad
+        
+            Generacion de Ruta Relativa :
+            -- Archivo en que la declaro : index.html
+            -- Ubicacion del archivo : root del proyecto
+            -- Archivo a Incorporar : html5.png
+            -- Ubicacion del archivo a incorporar : carpeta images que se encuentra en el root del proyecto
+
+            Tipos de elemento
+            -> Bloque = Ocupa el 100% del ancho de su contenedor,fuerza salto de linea y se les puede modificar ancho(width) y alto(height)
+            -> Linea = Ocupa solo el tamaño de su contenido,no fuerza salto de linea y no se le puede modificar ancho y alto
+            -> Linea-Bloque = Ocupa solo el tamaño de su contenido, fuerza salto de linea y se les puede modificar ancho(width) y alto(height)
+        -->
+            </section>
+
+            <section>
+                <h2>Navegacion</h2>
+            </section>
+
+            <section>
+                <h2>Css</h2>
+            </section>
+
+    </main>
+
+    <aside>
+        <h2>Soy un Aside</h2>
+    </aside>
+
+    <footer>
+        <span> Copyright Enriquez Ignacio </span>
+    </footer>
+
+    <div style="clear: both"></div> <!-- Tope de flotado que evita que los elementos de texto muevan -->
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+¿Cómo presentar la información? ==> ¿Cómo organizo el sitemap?
+
+Páginas Maestro/Detalle
+    1 - Una página "Maestro" en donde se muestra poca información de muchos elementos
+    2 - Una página "Detalle" en donde se muestra mucha información de un solo elemento
+
+    Sitemap:
+        + index
+            + detalle
+
+    Necesario:
+        + Estructura de datos que estamos manejando  (TDA)
+
+        Post: {
+            - id
+            - titulo !!!
+            - contenido_html
+            - fecha_publicacion !!!
+            - comentarios: [{
+                - id
+                - texto
+                - publicado_por
+            }]
+        }
+
+
+        Pagare?
+        Crédito?
+        Tarea?
+        Personajes?
+        Juegos?
+        Celulares?
+        Artículos?
+
+        ...
+
+        Proyecto de mi portafolio?
+
+
+Navegación CRUD
+Create-Read-Update-Delete
+
+    Sitemap:
+        + inicio (read all)
+            + nuevo (create)
+            + detalle (read one)
+                + actualizar (update)
+                + borrar (delete)
+
+        ó
+
+        + inicio (read all)
+            + nuevo (create)
+            + detalle (read one)
+            + actualizar (update)
+            + borrar (delete)

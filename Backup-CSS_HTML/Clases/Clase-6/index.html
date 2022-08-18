@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav ul {
+        margin: 0;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0;
+        width: 50%;
+
+        list-style-type: none;
+
+        display: flex;
+        justify-content: space-around;
+      }
+
+      nav ul li a {
+        color: black;
+        text-decoration: none;
+        text-transform: lowercase;
+        letter-spacing: 2px;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      nav ul li a:hover {
+        transition: 0.25s;
+        opacity: 0.7;
+      }
+
+      main {
+        box-sizing: border-box;
+        padding: 10% 20%;
+      }
+
+      main h2 {
+        text-align: center;
+      }
+
+      main .post-list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .post-item {
+        display: flex;
+        margin-bottom: 40px;
+      }
+
+      .post-item__image {
+      }
+
+      .post-item__image-gradient {
+        background: linear-gradient(
+          390deg,
+          rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.3) 25%,
+          rgba(255, 255, 255, 0) 100%
+        );
+
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        z-index: 9;
+      }
+
+      .post-item__image img {
+        opacity: 1;
+        z-index: 0;
+        border-radius: 50px;
+      }
+
+      .post-item__content {
+        box-sizing: border-box;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+
+      .post-item__title {
+        font-size: 32px;
+      }
+
+      .post-item__description {
+      }
+
+      .post-item__actions {
+      }
+    </style>
+
+    <style>
+
+        /* X-Small devices (portrait phones, less than 576px)
+        // No media query for `xs` since this is the default in Bootstrap
+        */
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (max-width: 575.98px) {  }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (max-width: 767.98px) {  }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (max-width: 991.98px) { 
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+
+            nav {
+                display: none;
+                top: 0;
+                position: fixed;
+                z-index: 10;
+                background-color: rgba(245, 245, 245, 0.98);
+                width: 100%;
+            }
+
+            nav:target {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li a {
+                display: inline-block;
+                text-transform: uppercase;
+                padding: 20px;
+            }
+
+            .post-item {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .post-item__content {
+                text-align: center;
+            }
+
+            .post-item__content div {
+                margin-bottom: 20px;
+            }
+         }
+
+        /* X-Large devices (large desktops, 1200px and up) */
+        @media (max-width: 1199.98px) {  }
+
+        /* XX-Large devices (larger desktops, 1400px and up) */
+        @media (max-width: 1399.98px) {  }
+
+        /*
+        @media screen and (max-width:1022px) {
+            body {
+                background: red;
+            }
+        }
+        */
+
+    </style>
+  </head>
+  <body>
+    <a href="#navBar">Menu</a>
+    <nav id="navBar">
+        <a href="#">X</a>
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Blog</h2>
+      <ul class="post-list">
+
+        <li class="post-list__item">
+          <div class="post-item">
+            <div class="post-item__image">
+                <div class="post-item__image-gradient"></div>
+              <img
+                src="https://i.picsum.photos/id/817/300/300.jpg?hmac=qVb5aRY5HRYMIvHKCENmCVsW3afChNsJDxaaOCh5bWo"
+                alt="Picsum"
+              />
+            </div>
+
+            <div class="post-item__content">
+              <div class="post-item__title">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </div>
+
+              <div class="post-item__description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
+                iste quasi fugiat temporibus, repellat eum labore amet voluptas
+                pariatur neque molestiae exercitationem, unde consectetur
+                accusamus, qui beatae modi cupiditate ab.
+              </div>
+
+              <div class="post-item__actions">Ver más</div>
+            </div>
+          </div>
+        </li>
+
+        <li class="post-list__item">
+            <div class="post-item">
+              <div class="post-item__image">
+                  <div class="post-item__image-gradient"></div>
+                <img
+                  src="https://i.picsum.photos/id/817/300/300.jpg?hmac=qVb5aRY5HRYMIvHKCENmCVsW3afChNsJDxaaOCh5bWo"
+                  alt="Picsum"
+                />
+              </div>
+  
+              <div class="post-item__content">
+                <div class="post-item__title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+  
+                <div class="post-item__description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  iste quasi fugiat temporibus, repellat eum labore amet voluptas
+                  pariatur neque molestiae exercitationem, unde consectetur
+                  accusamus, qui beatae modi cupiditate ab.
+                </div>
+  
+                <div class="post-item__actions">Ver más</div>
+              </div>
+            </div>
+          </li>
+
+          <li class="post-list__item">
+            <div class="post-item">
+              <div class="post-item__image">
+                  <div class="post-item__image-gradient"></div>
+                <img
+                  src="https://i.picsum.photos/id/817/300/300.jpg?hmac=qVb5aRY5HRYMIvHKCENmCVsW3afChNsJDxaaOCh5bWo"
+                  alt="Picsum"
+                />
+              </div>
+  
+              <div class="post-item__content">
+                <div class="post-item__title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+  
+                <div class="post-item__description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  iste quasi fugiat temporibus, repellat eum labore amet voluptas
+                  pariatur neque molestiae exercitationem, unde consectetur
+                  accusamus, qui beatae modi cupiditate ab.
+                </div>
+  
+                <div class="post-item__actions">Ver más</div>
+              </div>
+            </div>
+          </li>
+
+          <li class="post-list__item">
+            <div class="post-item">
+              <div class="post-item__image">
+                  <div class="post-item__image-gradient"></div>
+                <img
+                  src="https://i.picsum.photos/id/817/300/300.jpg?hmac=qVb5aRY5HRYMIvHKCENmCVsW3afChNsJDxaaOCh5bWo"
+                  alt="Picsum"
+                />
+              </div>
+  
+              <div class="post-item__content">
+                <div class="post-item__title">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </div>
+  
+                <div class="post-item__description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  iste quasi fugiat temporibus, repellat eum labore amet voluptas
+                  pariatur neque molestiae exercitationem, unde consectetur
+                  accusamus, qui beatae modi cupiditate ab.
+                </div>
+  
+                <div class="post-item__actions">Ver más</div>
+              </div>
+            </div>
+          </li>
+
+      </ul>
+    </main>
+  </body>
+</html>

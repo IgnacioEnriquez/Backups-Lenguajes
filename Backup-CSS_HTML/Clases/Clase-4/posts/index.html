@@ -1,0 +1,106 @@
+<!--
+    [{
+        titulo,
+        fecha
+    }]
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .listado-posts {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            width: 70%;
+
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            padding: 10px;
+
+        }
+
+        .listado-posts__item {
+            width: 100%;
+            margin: 20px 0;
+            /* 
+            margin: margen_en_4_lados;
+            margin: vertical horizonal; 
+            */
+
+            box-sizing: border-box;
+            padding: 30px 40px;
+            box-shadow: black 5px 10px 15px -10px;
+        }
+
+        .listado-posts__item:hover {
+            transition: 0.5s;
+            cursor: pointer;
+            font-size: 18px;
+            padding: 40px;
+        }
+
+        .post-item {}
+
+        .post-item__title {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+        }
+
+        .post-item__date {}
+
+    </style>
+
+</head>
+<body>
+
+    <a href="nuevo.html">Nuevo</a>
+    
+    <ol class="listado-posts">
+
+        <li class="listado-posts__item">
+            <div class="post-item">
+                <div class="post-item__title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                </div>
+                <div class="post-item__date">
+                    Publicado el 04 de Agosto de 2022
+                </div>
+            </div>
+        </li>
+
+        <li class="listado-posts__item">
+            <div class="post-item">
+                <div class="post-item__title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                </div>
+                <div class="post-item__date">
+                    Publicado el 04 de Agosto de 2022
+                </div>
+            </div>
+        </li>
+
+        <li class="listado-posts__item">
+            <div class="post-item">
+                <div class="post-item__title">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                </div>
+                <div class="post-item__date">
+                    Publicado el 04 de Agosto de 2022
+                </div>
+            </div>
+        </li>
+        
+    </ol>
+
+</body>
+</html>

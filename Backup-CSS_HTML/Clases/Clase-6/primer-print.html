@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *
+        {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .app
+        {
+            display: flex;
+        }
+
+        .menu,
+        .main 
+        {
+            padding: 10px;
+        }
+
+        .menu
+        {
+            background: rgba(0, 0, 0, 0.2);
+            height: 100vh;
+            width: 35%;
+        }
+
+        .menu .menu-list
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu .menu-list .menu-list__item
+        {
+            text-align: center;
+        }
+
+        .menu .menu-list .menu-list__item a
+        {
+            display: block;
+            padding: 20px 0;
+            color: black;
+            text-decoration: none;
+
+            border-radius: 20px;
+        }
+
+        .menu .menu-list .menu-list__item a:hover
+        {
+            transition: 0.5s;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+
+        .main
+        {
+            width: 100%;
+        }
+
+        .articulos-table {
+            text-align: center;
+            width: 100%;
+        }
+
+        .articulos-table tr {
+            width: 100%;
+        }
+
+        .articulos-table tr td {
+            margin-bottom: 10px;
+        }
+
+        @media print {
+            .articulos-table thead {
+                display: none;
+            }
+
+            .articulos-table tr td {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="app">
+
+        <div class="menu">
+            <ul class="menu-list">
+                <li class="menu-list__item"><a href="#">Articulos</a></li>
+                <li class="menu-list__item"><a href="#">Stock</a></li>
+                <li class="menu-list__item"><a href="#">Procesos</a></li>
+                <li class="menu-list__item"><a href="#">Empleados</a></li>
+                <li class="menu-list__item"><a href="#">Proveedores</a></li>
+                <li class="menu-list__item"><a href="#">Pedidos</a></li>
+            </ul>
+        </div>
+
+        <div class="main">
+
+            <div class="main__title">
+                Listado de artículos
+            </div>
+
+            <div class="main__content">
+
+                <table class="articulos-table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Descripcion</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. </td>
+                            <td>1522</td>
+                        </tr>
+                        <tr>
+                            <td>#1</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. </td>
+                            <td>1522</td>
+                        </tr>
+                        <tr>
+                            <td>#1</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. </td>
+                            <td>1522</td>
+                        </tr>
+                        <tr>
+                            <td>#1</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. </td>
+                            <td>1522</td>
+                        </tr>
+                        <tr>
+                            <td>#1</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. </td>
+                            <td>1522</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

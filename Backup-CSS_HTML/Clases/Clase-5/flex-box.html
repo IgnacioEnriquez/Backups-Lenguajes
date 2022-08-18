@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        * { margin: 0; padding: 0; }
+        
+        .lista-item {
+            background: rgba(255, 0, 0, 0.301);
+            margin: 10px;
+            height: 100px;
+            width: calc(100% / 3.5);
+        }
+
+        .lista {            
+            height: 50vh;
+
+            display: flex;
+            /* flex-direction: EJE_PRINCIPAL row por defecto; */
+            flex-direction: row;
+
+            /* justify-content ALINEA los items en el EJE PRINCIPAL */
+            justify-content: space-around;
+
+            /* align-items ALINEA los items en el EJE SECUNDARIO */
+            align-items: center;
+
+            flex-wrap: wrap;
+        }
+
+        
+/*
+        .lista-item {
+            width: 30%;
+            float: left;
+        }
+*/
+    </style>
+</head>
+<body>
+    
+    <div class="lista">
+        <div class="lista-item">item 1</div>
+        <div class="lista-item">item 2</div>
+        <div class="lista-item">item 3</div>
+        <div class="lista-item">item 4</div>
+        <div class="lista-item">item 5</div>
+        <div class="lista-item">item 6</div>
+        <div class="lista-item">item 7</div>
+        <div class="lista-item">item 8</div>
+        <div class="lista-item">item 9</div>
+        <div class="lista-item">item 10</div>
+        <div class="lista-item">item 6</div>
+        <div class="lista-item">item 7</div>
+        <div class="lista-item">item 8</div>
+        <div class="lista-item">item 9</div>
+        <div class="lista-item">item 10</div>
+    </div>
+
+</body>
+</html>

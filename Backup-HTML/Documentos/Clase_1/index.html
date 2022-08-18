@@ -1,0 +1,164 @@
+<!-- HTML BASICO EXPLICACION -->
+<!-- c = estructura para hacer comentarios -->
+
+<!DOCTYPE html> <!-- Version de HTML que estamos utilizando -->
+<html lang="en"> <!-- Indica el idioma del HTML -->
+
+<!-- Estructura de Etiqueta HTML -->
+<!-- Una etiqueta en HTML tiene que ser pensada como una caja -->
+<!-- 
+    Etiqueta de apertura = (<head> => nombre de la etiqueta) 
+
+    Contenido = Todo lo que esta entre etiquetas,puede ser otras etiquetas.
+
+    Etiqueta de Cierre (</head>) 
+--> 
+
+<!-- Existen etiquetas autoconclusivas, no tienen etiquetas de cierre-->
+<!--  ej = <meta charset="UTF-8" /> --> 
+<!--  ej = <meta charset="UTF-8">   --> 
+
+
+<!-- Si una etiqueta esta dentro de toda es : Hija de -->
+<!-- Si una etiqueta contiene otra es : Padre(Contenedora) de-->
+
+<!-- Atributo de Etiqueta = modificador -- <head "Atributo/s"> -->
+<!-- Nos permite crear distinciones entre diferentes etiquetas -->
+
+<head> <!-- Padre(Contenedora) de todo lo que le indica al navegador COMO renderizar -->
+
+    
+    <!-- Renderizar = mostrar o formatear -->
+
+    <meta charset="UTF-8" /> 
+    <!-- meta = metadato = Etiqueta que contiene informacion necesaria para el navegador, normalmente le dice como renderizar como mostrar esos datos-->
+    <!-- charset = set de caracteres del idioma del contenido  -->
+
+    <!-- Genera compatibilidades para microsoft edge y internet explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Le muestra al navegador como debe calcular el tamaño de la pantalla del dispositivo que se esta viendo el sitio web. Responsive Design o Diseño Responsivo -->
+    <!-- Que se vea bien sin importar el dispositivo -->
+    <meta name="viewport" content="
+    width=device-width, initial-scale=1.0" />
+
+    <!-- Titulo -->
+    <title>HTML5</title>
+    
+    <!-- CSS Lenguaje que se utiliza para indicar como se van a ver las etiquetas HTML -->
+    <!-- Hoja de estilo interna,podemos escribir aca CSS -->
+    <style>
+
+     /*CSS -> Cascading Styles Sheets (Hojas de estilo Cascada)/*
+
+     /*Selectores = Permite indicarle al navegador que elemento queremos modificar*/
+     /*
+     Selectores Basicos ordenas por especificidad (Todos los selectores tienen un valor de especificidad. 
+     los selectores generales tienen un valor menor,mientras que los selectores mas individuales tiene un valor mayor.) = 
+
+     ID - Indica que queremos modificar la visualizacion cuyo elemento cual id corresponda - NO TIENE QUE HABER OTRO ID
+     
+     Clase - Indica que queremos modificar la visualizacion cuyo elemento cual Clase corresponda  
+     
+     Etiqueta - Indica que queremos modificar la visualizacion de todos los elementos cuyo nombre de etiqueta corresponda.
+
+    ----------------------------------------------------------------------------------------------------------------------
+
+     Selectores Compuestos = Se generan combinando selectores basicos y/o compuestos.
+     */
+
+     /*Selector de Etiqueta*/
+     h2
+     {
+        color: red;
+     }
+
+     /*Selector de ID*/
+     #titulo
+     {
+        background-color: cadetblue;
+        color : aliceblue;
+     }
+
+     /*Selector de Clase*/
+     .tipografia
+     {
+        font-family:'Courier New', Courier, monospace;
+        /*Fuente segura,tipografias que se encuentren en el SO*/
+     }
+
+     /* Flujo de Trabajo :
+        Se encarga de resolver el conflicto entre estilos a mostrar.
+        
+        Herencia - Los elementos hijos reciben los estilos aplicados al padre
+        Importancia - Se aplicaran los estilos que correspondal al padre mas cercano
+        Especificidad - Cualquier estilo aplicado con un selector es mas relevante que uno aplicado por herencia/importancia.
+            Cuanto mas especifico su selector(mayor su valor de especificidad), mas relevante el estilo aplicado.    
+
+        Pisado por lectura - Toda propiedad que se lea despues tiene prioridad que la que se lee antes (Ej red linea 39 < blue linea 44)
+     */
+        
+
+
+    </style>
+</head>
+
+<body>
+
+    <h1 id="titulo">Clase 01</h1>
+    <h2>Enunciados (titulos h1-6)</h2> <!-- los H son titulos con mayor y menor imprtancia -->
+
+    <!-- Valor semantico = que informacion le pasa al navegador -->
+
+    <h1>Titulo</h1> <!-- Para el SEO se recomienda que solo exista un H1 -->
+
+    <h2 class="tipografia">Titulo</h2>
+    <h3 class="tipografia">Titulo3</h3>
+    <h4>Titulo</h4>
+    <h5>Titulo</h5>
+
+    <!-- Atributo de la etiqueta permite incorporar estilos . No es recomendada porque cambia de idioma -->
+    <h6 style = "font-size: 48px;">Titulo</h6>
+
+    <h2>Etiquetas de Texto</h2>
+
+    <!-- Usamos para parrafos de texto -->
+    <!-- Strong = Negrita con posicionamiento  -->
+    <!-- B =  No tienen en cuenta el posicionamiento -->
+    <!-- I =  No tienen en cuenta el posicionamiento -->
+    <!-- Em = Con posicionamiento -->
+
+    <p>Etiqueta para poner parrafos</p>
+    <p>
+        <strong>Lorem ipsum dolor </strong> sit amet consectetur adipisicing elit. Nam quos delectus ea nesciunt hic nulla. <b>Optio quo corrupti voluptate facere placeat </b>, <br> eius <i> molestiae aliquid </i> libero iure. <em> Neque commodi similique esse.</em>
+    </p>
+    <!-- Lorem = Texto simulado -->
+    <!-- Lorem*2 = 2 parrafos de texto simulado -->
+    <!-- Lorem20 = 20 palabras de parrafos de texto simulado -->
+
+    <!-- Usamos para tres/cuatro palabras nomas -->
+    <span>Palabras</span>
+
+    <!-- Tipos de Elementos = Caracteristicas de comportamiento -->
+    <!-- Bloque = Ocupa el 100% del ancho de su contenedor sin importar el contenido,fuerza salto de linea, ejemplos H1,P,BODY, utilizan todo el ancho de la etiqueta -->
+    <!-- Linea = Ocupa solo el ancho total de su contenido y no fuerza salto de linea -->
+
+    <h2>Listas</h2>
+    <h3>Ordenadas</h3>
+    <ol type="A">
+        <li>Si Importan El Orden</li>
+        <li>Si Importan El Orden</li>
+        <li>Si Importan El Orden</li>
+    </ol>   
+    
+    <h3>Desordenadas</h3>
+    <ul type="circle">
+        <li>No importan el orden</li>
+        <li>No importan el orden</li>
+        <li>No importan el orden</li>
+    </ul>
+
+
+</body>
+
+</html>

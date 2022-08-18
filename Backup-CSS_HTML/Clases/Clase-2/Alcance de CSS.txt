@@ -1,0 +1,9 @@
+1°) Wireframe
+Layout: ubicación de los elementos en la pantalla (table, grid y flex son dos estilos de layout)
+
+2°) Prototype
+Text: formato de texto, tipografías
+Apariencia: color, fondo, bordes, cursor
+Animaciones: transition, animate
+Detalles visuales: signo de moneda, signo de copyright
+Otros: estilos de lista, extras

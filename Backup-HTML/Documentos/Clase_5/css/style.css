@@ -1,0 +1,67 @@
+/*
+    Box-Model -> Propiedades de CSS que manejan el armado de la caja
+        => Características de la Caja
+            => Alto (height)
+            => Ancho (width)
+            => Borde (border)
+            => Espaciado (interno: padding - externo: margin)
+        => Espacio que Ocupa la Caja
+            => Box-sizing - Permite declarar el tipo de cálculo utilizado para conocer el espacio que ocupa la caja
+        => Comportamiento de la Caja        
+            => Display - Permite declarar el tipo de comportamiento que tendrá la caja (tipo de elemento)
+                => block (elemento de bloque) - Ocupa el 100% del ancho del elemento contenedor, fuerza salto de línea y se le puede cambiar ancho y alto
+                => inline (elemento de línea) - Ocupa sólo el ancho de su contenido, no fuerza salto de línea y NO se le puede cambiar ancho y alto
+                => inline-block (elemento de línea-bloque) - Ocupa sólo el ancho de su contenido, no fuerza salto de línea y se le puede cambiar ancho y alto
+                => none - Saca al elemento del flujo de trabajo de HTML (Simula que nunca escribimos el elemento), pero le reserva el espacio
+                => flex (Flexbox) - Genera un elemento que tiene la capacidad de indicarle a su contenido cómo posicionarse (válido para grid)
+        
+    NINGUNA DE LAS PROPIEDADES DEL BOX-MODEL SON HEREDABLES        
+    
+*/
+
+.linea {
+  display: inline;
+}
+
+.bloque {
+  display: block;
+}
+
+.cuadrado {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(55, 55, 131);
+  margin: 20px auto;
+  display: none;
+  /*visibility: hidden; No muestra al elemento, pero sigue ocupando su espacio*/
+}
+
+/*Flexbox*/
+.flex {
+  /*Características de la Caja Contenedora*/
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+  margin: 20px auto;
+  display: flex;
+
+  /*
+    Posicionamiento de los elementos contenidos (posible porque la caja contenedora tiene un display: flex)
+        => Todo el posicionamiento se realiza en base al width y heght del elemento contenedor
+        => RECORDAR -> El width del contenedor puede ser inferido por el navegador en base a su contenedor padre. El height por defecto de cualquier elemento en HTML es auto
+  */
+  align-items: center; /*Ubica los elementos en el eje secundario (y)*/
+  justify-content: space-around; /*Ubica los elementos en el eje principal (x)*/
+  /*
+    Valores de spacing
+        => space-around - Genera espacios desde el elemento central
+        => space-between - Manda cada elemento a su rincon
+        => space-evenly - Se asegura que todos los espacios sean equitativos
+  */
+}
+
+.elemento {
+  width: 100px;
+  height: 100px;
+  background-color: cadetblue;
+}

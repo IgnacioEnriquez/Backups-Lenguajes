@@ -1,0 +1,77 @@
+/*CSS Externo*/
+
+.repasoFloat
+{
+    border: 5px solid black;
+    height: 300px; /* Si no lo declaramos se adapta a su contenido*/
+
+    /*
+    Medida de Porcentaje -> tamaño = ancho/alto del contenedor * %
+      --> tamaño = auto * %
+    */
+}
+
+.sectionFloat
+{
+    width: 45%;
+    border: 1px solid black;
+}
+
+.floatLeft
+{
+    float:left;  
+    margin-left: 10px;  
+    margin-top: 20 px;
+}
+
+.floatRight
+{
+    float:right;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+/*Uso de hojas de estilo externas*/
+
+header
+{
+    height: 100px;
+    background-color: crimson;
+    color: whitesmoke
+}
+
+/*Pseudo - Clases (selectores) cambian un estilo si se cumple una condicion*/
+a:link
+{
+    /*Modifica los estilos de los elementos a cuyo href no fue visitado*/
+    color: black;
+    text-decoration: none; /*Maneja el subrayado*/
+
+}
+
+a:visited
+{
+    color: whitesmoke;
+}
+
+/*Pseudo - Clases (selectores) cambian un estilo cuando pasa algo*/
+a:hover
+{
+    /*Cuando pasamos el mouse por arriba*/
+    background-color: whitesmoke;
+    color: crimsom;
+
+}
+
+a:active
+{
+    /*En el momento especifico en que estamos haciendo click*/
+
+    font-size: 22px; /*Cambia el tamaño de la letra*/
+
+}
+/*
+Pseudo - Clases
+ -> Es un selector que permite indicar que vamos a cambiar un estilo si se cumple una condicion o cuando
+ suceda algo
+*/

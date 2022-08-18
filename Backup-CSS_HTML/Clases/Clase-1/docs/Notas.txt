@@ -1,0 +1,22 @@
+Pensar en términos de procesos. SECUENCIA. 
+HACER UNA COSA DESPUES DE OTRA.
+
+Un proceso es una secuencia de actividades, que tiene un comienzo y un fin.
+
+
+Entradas => Brief + Recursos
+
+Pasos:
+- Condensar vistas y requerimientos por vista 
+- Diseñar el árbol de navegación
+- Diseñar el Wireframe (Organizar el espacio)
+- Prototipo
+- Codigo
+- Publicación
+- Soporte
+
+Resultado => Maqueta (Un conjunto de estáticos (HTML / CSS / JS?) que representan el diseño y la guía
+de estilos de un sitio)
+
+
+PROCESO PARA HACER UNA MAQUETA
