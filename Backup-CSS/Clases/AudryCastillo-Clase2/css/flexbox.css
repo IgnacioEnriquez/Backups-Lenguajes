@@ -1,0 +1,15 @@
+
+.padre
+{
+    width: 80%;
+    height: 400px;
+    background-color: lightblue;
+    /*Se utiliza para acomodar cajas adentro de un contenedor*/
+    display: flex;
+}
+
+.hijo
+{
+    background-color: brown;
+    border: 1px solid black ;
+}

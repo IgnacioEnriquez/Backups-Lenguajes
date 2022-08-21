@@ -1,0 +1,51 @@
+.dis,.dis2
+{
+    /*Siempre se le debe poner altura y largo*/
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.dis2
+{
+    background-color: orange;
+}
+
+.dis{
+    /*Ignora el tamaño del width y del height*/
+    display: inline;  
+}
+
+.caja1
+{
+    width: 40%;
+    height: 100px;
+    background-color: darkgreen;
+    /*Da acceso a trabajar con coordenadas(Posicion donde quiero mi caja)*/
+    position: relative;
+    left:50px;
+    top:50px;
+}
+
+.caja2
+{
+    /*Mueve el objeto de acuerdo a las coordenadas de la caja que tenga
+    Suele utilizarse una caja con position absolute dentro de una caja con position relative*/
+    position: absolute;
+    width: 30%;
+    height: 200px;
+    background-color: palevioletred;
+    /*Se utiliza para marcar cual va adelante y cual atras, especificamente quien va a estar primero*/
+    z-index: 1;
+}
+
+.caja3 
+{
+    width: 40%;
+    height: 100px;
+    background-color: darkgreen;
+    /*Se mantiene fija a lo largo de la pagina*/
+    position: fixed;
+    top: 5px;
+
+}

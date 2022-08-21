@@ -1,0 +1,38 @@
+/*Selector Universal*/
+*
+{
+        
+}
+/*Selector de ID*/
+#id
+{
+
+}
+
+/*Selector de clase*/
+.clase
+{
+
+}
+
+/*Selector de etiqueta*/
+h1
+{
+
+}
+
+/*Selector adyacente*/
+h4+p{
+
+}
+
+/*Selector descendiente*/
+p strong{
+
+}
+
+/*Selector grupal*/
+h1,h2,h3{
+
+}
+

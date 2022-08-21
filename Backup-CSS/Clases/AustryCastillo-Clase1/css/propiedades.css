@@ -1,0 +1,27 @@
+header
+{
+    /*Color de fondo*/
+    background-color: red;
+
+    /*Altura*/
+    height: 120px;
+
+    /*Alinea texto */
+    text-align: center;
+
+    /*Crea espacio para adentro del contenedor, margen interno*/
+    padding: 1px;
+
+    /*Subrayado*/
+    text-decoration: none ;
+
+    /*Crea espacio para afuera del contenedor, margen externo*/
+    margin: 1px;
+
+    /*Sombra para textos*/
+    text-shadow: 1px 2px 3px 4px black;
+
+    /*Sombra para cajas*/
+    box-shadow: 1px 1px 1px 1px black;
+
+}

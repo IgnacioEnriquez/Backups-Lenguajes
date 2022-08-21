@@ -1,0 +1,19 @@
+
+p
+{
+    font-size: 100px;
+}
+
+.what
+{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 10px;
+    top: 50px;
+}
+
+img
+{
+    width: 100%;
+}

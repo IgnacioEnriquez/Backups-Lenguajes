@@ -1,0 +1,30 @@
+
+.ejemplo
+{
+    display: flex;
+    /*Se utiliza para acomodar encolumnados*/
+    /*Se acomoda en el eje X
+      Flex Start = Al comienzo de la izquierda
+      Center = centro
+      Flex-End = al final de la derecha
+      Space-Around = Genera espacios a los costados y en el medio de los elementos
+      Space-Evenly = Espacio entre elementos equitativo
+      Space-Between = Solo se genera espacio entre los dos*/     
+    
+      justify-content: flex-end;
+
+    /*Se acomodan en el eje Y 
+    Si o si tiene que haber un height
+    Flex-Start = Al comienzo de todo
+    Flex-End = Al final de todo 
+    Center = centro*/
+    align-items: center;
+
+    /* Se acomoda en el eje y pero para un solo elemento
+    Flex-Start = Al comienzo de todo
+    Flex-End = Al final de todo 
+    Center = centro
+    */
+    align-self: flex-end;
+
+}
