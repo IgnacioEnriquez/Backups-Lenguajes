@@ -6,6 +6,28 @@
     background-color: lightblue;
     /*Se utiliza para acomodar cajas adentro de un contenedor*/
     display: flex;
+    /*Indica la direccion de como van a ir los elementos,ej Columna - Fila
+    Column - Reverse : La columna arranca desde abajo
+    Row - Reverse : La fila arranca desde la derecha*/
+    flex-direction: row;
+    /*Pone un espacio como margin entre elementos*/
+    gap:5px;
+    /*Decide si el hijo respeta o no los valores o tamaños del padre
+    wrap : respeta
+    no wrap : no respeta tamaños*/
+    flex-wrap: wrap ;
+    /*Acomoda los elementos en el eje Y
+    flex-end : Final del eje Y
+    flex-start : Comienzo del eje Y*/
+    /*Cuando se pone en flex.direction : row el align item es el eje Y, cuando es al reves el eje es el X*/
+    align-items: flex-end;
+    /*En funcion al eje principal,en row el eje X, en column el eje Y
+    Space-Between : Espacio perfecto entre ellos en el medio nomas
+    Space-Around : Espacio entre ellos de todos los lados
+    Space-Evenly : */
+    justify-content: flex-end;
+    /*Alinea un elemento individualmente*/
+    align-self: center;
 }
 
 .hijo
