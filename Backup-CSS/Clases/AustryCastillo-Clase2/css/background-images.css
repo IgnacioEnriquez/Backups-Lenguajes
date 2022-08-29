@@ -1,0 +1,9 @@
+.contenido
+{
+    /*Imagen de fondo*/
+    background-image: url(direcciondeimagen);
+    /*Si la imagen es muy chica que no se repita, solo se adapte*/
+    background-repeat: no-repeat;
+    /*Tamaño de imagen - que cubra todo el div*/
+    background-size: cover;
+}

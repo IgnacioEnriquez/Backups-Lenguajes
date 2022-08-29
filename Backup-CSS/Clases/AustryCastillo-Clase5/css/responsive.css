@@ -1,0 +1,14 @@
+/*DISEÑO ADAPTABLE - RESPONSIVE*/
+/*ADAPTA SEGUN EL DISPOSITIVO o GAMA DE DISPOSITIVOS*/
+
+/*Se adapta solamente para una pantall y con un maximo de 600px*/
+/*Orientation = Define cosas para una orientacion*/
+@media only screen and (max-width:600px) {
+   
+}
+
+/*Esto se utiliza para tener diferentes css dependiendo los tamaños o condicione deseadas
+
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="style.css">
+
+*/

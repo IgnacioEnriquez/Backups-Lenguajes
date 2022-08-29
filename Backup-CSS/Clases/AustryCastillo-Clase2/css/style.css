@@ -47,5 +47,10 @@
     /*Se mantiene fija a lo largo de la pagina*/
     position: fixed;
     top: 5px;
+}
 
+.listas
+{
+    /*Les quita los estilos a las listas*/
+    list-style: none;
 }

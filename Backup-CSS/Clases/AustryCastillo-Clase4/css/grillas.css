@@ -1,0 +1,45 @@
+/*Las grillas se trabajan de un contenedor padre como flex que se encarga de decir como se van a acomodar*/
+/*Tiene un sistema de coordenadas
+ X = FILA
+ Y = COLUMNA
+ */
+
+ .grid-padre
+ {
+    display: grid;
+    /*Divide en cantidad de columnas por cantidad de valores*/
+    /*
+    Con este se le pone el tamaño a las columnas
+
+    Se puede trabajar con fracciones
+    grid-template-columns : 1fr 2fr 1fr
+
+    Se puede repetir las cantidades
+    grid-template-columns : 20% repeat(8,10%) -> 8 columnas de 10%   
+    
+    grid-template-columns: 100px 100px;
+    */
+    /*Pongo las coordenadas de como quiero mis columnas y el tamaño entre ellos*/
+    grid-template-columns: [x0]33%[x1]33%[x2]33%[x3];
+    grid-template-rows: [y0]20%[y1]80%[y2];
+
+    /*Se le puede poner tamaño a las filas tambien*/
+    grid-template-rows: 20% 50%;
+
+    /*Podemos utilizar gap igual que flex*/
+    /*Se puede usar cualquiera de estos 3 valores especificos*/
+    column-gap: 10px;
+    row-gap: 10px;
+    gap: 10px;
+    
+ }
+
+ .grid-hijo
+ {
+    /*Le digo de que eje quiero empezar*/
+    grid-column-start: x0;
+    grid-column-end: x2;
+
+    /*Ejemplo con una 1 propiedad*/
+    grid-column: x0/x3 ;
+ }
