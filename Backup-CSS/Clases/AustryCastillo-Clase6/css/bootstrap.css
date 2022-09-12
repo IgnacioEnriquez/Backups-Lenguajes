@@ -1,0 +1,9 @@
+/*Podemos utilizar un monton de estilos predeterminados*/
+/*
+Es posible poner .containers para que lo que los contiene sean responsive y ocupen un tamaño predeterminado
+    
+*/
+
+.row div {
+    border : 1px solid black;
+}

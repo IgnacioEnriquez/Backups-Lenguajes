@@ -1,0 +1,82 @@
+/*Maquetando con cajas*/
+/* 
+.nav {
+  background-color: brown;
+  height: 50px;
+}
+
+.header {
+  background-color: aquamarine;
+  height: 400px;
+}
+
+.main {
+  background-color: black;
+  height: 600px;
+} 
+*/
+
+/*Maquetando con  grillas*/
+
+/*Variables en root*/
+:root
+{
+    --backred: red;
+    --strong: bold;
+    --white : white;
+}
+
+.ppal{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 400px 600px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .header {
+    background-color: aquamarine;
+  }
+  
+  .main {
+    background-color: black;
+  } 
+
+  .title,
+  .subtitle
+  {
+    display: inline; 
+
+  }
+
+  .title
+  {
+    background-color: var(--backred);
+    color: var(--white);
+    /*16 px medida base - h1 tiene 32 px*/
+    font-size: 22px;
+    padding: 0 10px;
+  }
+
+  .subtitle
+  {
+    font-size: 18px;
+  }
+
+  .container-right a 
+  {
+    text-decoration: none;
+    color:  black;
+    padding-left: 0px 5px;
+    font-weight: bold;
+  }
+
+  .container-right .link--now
+  {
+    background-color: var(--backred);
+    color: var(--white);
+  }
