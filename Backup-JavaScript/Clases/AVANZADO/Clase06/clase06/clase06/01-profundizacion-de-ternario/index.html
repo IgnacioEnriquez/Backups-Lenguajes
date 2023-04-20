@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profundización de operador ternario</title>
+</head>
+<body>
+    <h1>Profundización de operador ternario</h1>
+    <script>
+        const numero = 10;
+        // Es una mala práctica anidar operadores ternarios
+        // const informacion = numero > 0 ? '+' : ( numero < 0 ? '-' : '(no tiene)');
+        const informacion = numero > 0
+            ? '+'
+            : ( numero < 0 ? '-' : '(no tiene)');
+        console.log(`El número es ${numero}. Signo: ${informacion}.`);
+        
+    </script>
+</body>
+</html>

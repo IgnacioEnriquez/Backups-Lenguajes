@@ -1,0 +1,16 @@
+Insertar tres productos que tengan nombre, precio y marca (verificar en la DB cómo se deberían llamar dichos campos) por separado, en 3 instrucciones distintas.
+
+
+Insertar 5 productos que tengan los mismos campos, y también descripción, con una única instrucción.
+
+
+Buscar todos los productos con marca 'Philips'
+Buscar todos los productos con marca 'Sony'
+Buscar todos los productos con marca 'Sony' o 'Philips'
+Buscar todos los productos con precio entre 20000 y 70000
+Buscar todos los productos con precio entre 20000 y 70000, de marca Sony
+Buscar todos los productos con precio entre 20000 y 70000, de marca Sony, ordenados por marca y nombre
+
+
+Buscar los primeros 10 productos con precio entre 4000 y 90000, ordenados por marca, nombre y precio.
+Buscar los siguientes 10.

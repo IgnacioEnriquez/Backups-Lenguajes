@@ -1,0 +1,126 @@
+Filtro con AND implícito:
+db.products.find({name: 'Smart Watch', description: 'color blanco'})
+
+
+Filtro con AND explícito:
+db.products.find({$and: [{name: 'Smart Watch'}, {description: 'color blanco'}]})
+
+
+Filtro con OR explícito:
+db.products.find({$or: [{name: 'Smart Watch'}, {description: 'color blanco'}]})
+
+
+Filtro con OR explícito:
+db.products.find({$or: [{name: 'Smart Watch'}, {description: 'color blanco'}]})
+
+
+Filtro mal armado (se intenta buscar equipos de músuca y ollas eléctricas):
+db.products.find({$and: [{name: 'Equipo de música'}, {name: 'Olla eléctrica'}]})
+
+
+
+Filtro bien armado (equipos de músuca y ollas eléctricas):
+db.products.find({$or: [{name: 'Equipo de música'}, {name: 'Olla eléctrica'}]})
+
+
+
+Filtro con AND y OR combinados:
+db.products.find({$or: [  {name: 'Smart Watch', description: 'color blanco'}, {name: 'TV', brand: 'Sony'} ]  })
+
+
+
+Productos con precio mayor a 150000:
+(gt: greater than: mayor que)
+db.products.find({price: {$gt: 150000 } })
+
+
+Productos con precio mayor o igual a 150000:
+(gte: greater than or equal: mayor o igual que)
+db.products.find({price: {$gte: 150000 } })
+
+
+Productos con precio menor a 150000:
+(lt: lower than: menor que)
+db.products.find({price: {$lt: 150000 } })
+
+
+Productos con precio menr o igual a 150000:
+(lte: lower than or equal: menor o igual que)
+db.products.find({price: {$lte: 150000 } })
+
+
+
+Rango de valores (equivalente en SQL a "BETWEEN"):
+db.products.find({price: {$gte: 80000, $lte: 150000 } })
+
+
+Orden ascendente:
+db.products.find().sort({price: 1})
+
+Orden descendente:
+db.products.find().sort({price: -1})
+
+Orden por más de un campo:
+db.products.find().sort({name: 1, description: 1})
+db.products.find().sort({name: 1, description: -})
+db.products.find().sort({name: -1, description: 1})
+db.products.find().sort({name: -1, description: -1})
+db.clientes.find().sort({nombre: 1, apellido: 1})
+
+
+_id: ObjectId("634757eac26f0ebdb1d6e37e")
+
+Filtro + sort:
+db.clientes.find({ nombre: 'Laura' }).sort({apellido: 1})
+
+
+
+Limit:
+db.products.find().limit(5
+db.products.find({name: 'TV'}).limit(5
+db.products.find({name: 'TV'}).sort({price: 1}).limit(5)
+
+
+Skip:
+db.products.find({name: 'TV'}).sort({price: 1}).skip(5)
+
+
+Limit y Skip:
+db.clientes.find().sort({apellido: 1, nombre: 1}).limit(5)
+db.clientes.find().sort({apellido: 1, nombre: 1}).skip(5).limit(5)
+db.clientes.find().sort({apellido: 1, nombre: 1}).skip(10).limit(5)
+db.clientes.find().sort({apellido: 1, nombre: 1}).skip(15).limit(5)
+db.clientes.find().sort({apellido: 1, nombre: 1}).skip(20).limit(5)
+db.clientes.find().sort({apellido: 1, nombre: 1}).skip(25).limit(5)
+
+
+Obtener la cantidad de documentos de una colección o consulta:
+db.products.count()
+db.products.find({name: /tv/i}).count()
+
+
+
+Búsqueda por ObjectId:
+db.products.find({_id: ObjectId("634757eac26f0ebdb1d6e37e")})
+db.products.findOne({_id: ObjectId("634757eac26f0ebdb1d6e37e")})
+
+
+Buscar documentos que tengan determinada propiedad (o campo):
+db.products.find({brand: {$exists: true}})
+db.products.find({brand: {$exists: true}}).sort({name: 1})
+
+Buscar documentos que no tengan determinada propiedad (o campo):
+db.products.find({brand: {$exists: false}})
+
+
+Array/Colección de resultado:
+db.products.find({price: {$gte: 50000, $lte: 200000}})
+
+Solo un documento:
+db.products.findOne({price: {$gte: 50000, $lte: 200000}})
+
+
+Traer el listado de todos los nombres distintos:
+db.products.distinct('name')
+db.clientes.distinct('nombre')
+

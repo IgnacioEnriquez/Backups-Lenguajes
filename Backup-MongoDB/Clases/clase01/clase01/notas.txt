@@ -1,0 +1,130 @@
+Comandos para la terminal:
+(no todos funcionan en todas las terminales)
+
+Listar archivos y carpetas del directorio actual:
+
+dir
+4
+ls
+
+ls -l
+ls -a
+ls -la
+
+
+Limpiar/borrar el contenido de la terminal:
+
+cls
+clear
+
+
+Ingresar a un directorio:
+cd nombre_directorio
+cd directorio1/directorio2/subdirectorio
+
+
+Subir uno o más directorios:
+cd .. (recomendado)(
+cd..  (no recomendado, no funciona en todos lo S.O.)
+cd ..\..\..
+
+
+Salir de la terminal:
+exit
+
+
+----------------------
+Verificar si Mongo Shell está instalado y obtener su versión:
+mongosh --version
+
+
+Verificar si MongoDB está instalado y obtener su versión:
+mongod --version
+
+
+----------------------
+Iniciar el servidor MongoDB:
+mongod
+mongod --dbpath="ruta\relativa"
+mongod --dbpath="C:\ruta\absoluta"
+
+Iniciar el cliente Mongo Shell:
+mongosh
+
+----------------------
+Cerrar el servidor MongoDB:
+CTRL + C (1, 2 o 3 veces)
+
+
+----------------------
+Cerrar el cliente Mongo Shell:
+CTRL + C (2 veces), o CTRL + D, o ".exit"
+
+
+
+----------------------
+
+Comandos para MongoDB
+
+mostrar las bases de datos existentes:
+show dbs
+
+mostrar la base de datos seleccionada actualmente:
+db
+
+Seleccionar una base de datos:
+use nombre_db
+
+Mostrar las colecciones existentes en la DB actual:
+show collections
+
+
+Insertar un documento en una colección:
+db.colores.insertOne({ nombre: 'Azul' })
+
+
+Insertar varios documentos a la vez:
+db.colores.insertMany( [ { nombre: 'Celeste' }, { nombre: "Naranja" }, { nombre: "Negro" } ] )
+
+db.colores.insertMany([
+	{ nombre: 'Dorado'},
+	{ nombre: 'Marrón'},
+	{ nombre: 'Blanco'}
+])
+
+
+Filtros:
+
+colores con nombre "Naranja"
+db.colores.find({nombre: 'Naranja'})
+db.colores.find({nombre: 'NARAnja'})
+db.colores.find({nombre: /naranja/i})
+
+
+Nombre "Rojo" exacto:
+db.colores.find({nombre: 'Rojo'})
+
+Nombre "rojo" exacto:
+db.colores.find({nombre: 'rojo'})
+
+
+Búsqueda con expresiones regulares:
+
+Que contenga el texto "Rojo" exacto:
+db.colores.find({nombre: /Rojo/})
+
+Que contenga el texto "rjo", ya sea que esté con mayúsculas o minúsculas:
+db.colores.find({nombre: /rojo/i})
+
+Que comience con el texto exacto "Rojo".
+db.colores.find({nombre: /^Rojo/})
+
+Que comience con el texto exacto "rojo", ya sea en minúsculas o mayúsculas:
+db.colores.find({nombre: /^rojo/i})
+
+Que termine con el texto exacto "rojo", ya sea en minúsculas o mayúsculas:
+db.colores.find({nombre: /rojo$/i})
+
+Que sea el texto exacto "rojo", ya sea en minúsculas o mayúsculas:
+db.colores.find({nombre: /^rojo$/i})
+

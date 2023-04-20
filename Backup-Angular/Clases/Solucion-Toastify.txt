@@ -1,0 +1,5 @@
+Para quienes tienen problema de toastify instalen
+"@types/toastify-js"
+y luego importen asi
+import * as Toastify from 'toastify-js';
+de nada

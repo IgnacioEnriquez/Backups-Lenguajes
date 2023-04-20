@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de formularios - 5</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Validación de formularios - 5</h1>
+    <form action="https://google.com">
+        
+        <div class="row">
+            <!-- <input type="text" class="texto" autofocus> -->
+            <div class="input-group">
+                <label for="texto">Texto:</label>
+                <input type="text" class="texto" autofocus>
+                <div class="detail"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <input class="btn-enviar" type="submit">
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Enviar (sin validación de JS)">
+        </div>
+
+        <div class="row">
+            <button type="submit">Enviar (sin validación de JS)</button>
+        </div>
+
+    </form>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos avanzados - Bubbling y Capturing</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <h1>Eventos avanzados - Bubbling y Capturing</h1>
+
+
+    <h2>Bubbling</h2>
+    <div class="bubbling">
+        <div class="box box--1">
+            uno
+            <div class="box box--2">
+                dos
+                <div class="box box--3">
+                    tres
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Capturing</h2>
+    <div class="capturing">
+        <div class="box box--1">
+            uno
+            <div class="box box--2">
+                dos
+                <div class="box box--3">
+                    <span>tres</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

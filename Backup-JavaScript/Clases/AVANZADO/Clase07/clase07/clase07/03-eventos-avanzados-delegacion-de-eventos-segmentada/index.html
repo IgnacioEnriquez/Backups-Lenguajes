@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delegación de eventos avanzada</title>
+    <style>
+        .paragraphs-container {
+            padding: 1em;
+            border: 2px solid #222;
+        }
+        
+        .list {
+            padding: 4em;
+            border: 2px solid #222;
+        }
+
+        article {
+            padding: 2em;
+        }
+
+        .destacado {
+            background-color: #ffd;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Delegación de eventos avanzada</h1>
+
+    <div class="paragraphs-container">
+        <ul>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Asperiores, accusamus eaque! Dolorum, sequi!</li>
+        </ul>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo a aliquid autem non illum ad ex sunt libero laboriosam consectetur.</p>
+        <p>Officia, numquam animi tempora aspernatur veritatis quasi nam, alias quia quas voluptatibus, laboriosam fugiat iste harum. Maxime dolor nihil dolore.</p>
+        <p>Natus praesentium aspernatur veniam, iusto quas aperiam dicta voluptas excepturi odio autem aut facilis, a in dolorem eligendi placeat corporis.</p>
+    </div>
+
+    <ul class="list">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+        <li>Reiciendis, id rerum perferendis illo natus beatae?</li>
+        <li>Culpa aspernatur doloremque reprehenderit. Maxime, nam deleniti.</li>
+        <li>Sit cumque reiciendis officiis, doloremque ratione doloribus.</li>
+        <li>Facere porro cupiditate aspernatur nisi fugiat esse.</li>
+    </ul>
+
+    <!-- section#servicios>h2{servicios}+article*3>h3{Artículo $}+p>lorem30 -->
+    <section id="productos">
+        <h2>Productos</h2>
+        <article>
+            <h3>Artículo 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nostrum modi quos doloribus ipsum veniam, error hic consequuntur, voluptatibus soluta maxime incidunt rerum dolor asperiores nemo saepe? Magnam, tempore quas.</p>
+        </article>
+        <article class="destacado">
+            <h3>Artículo 2</h3>
+            <p>Eum at, excepturi aliquid iste, ad odit optio aspernatur consequatur sint necessitatibus et recusandae adipisci veritatis consectetur! Excepturi quo quod eaque eius laboriosam non molestiae pariatur incidunt. Aliquam, consectetur blanditiis.</p>
+        </article>
+        <article>
+            <h3>Artículo 3</h3>
+            <p>Repellat numquam dicta accusamus nisi? Odio tempora, iusto molestiae possimus enim exercitationem repellat ducimus aspernatur fugiat nostrum vitae eaque nam voluptates eum dolor nemo maiores veritatis delectus, aliquid quod repudiandae.</p>
+        </article>
+    </section>
+    
+    <!-- section#servicios>h2{Servicios}+article*3>h3{Artículo $}+p>lorem30 -->
+    <section id="servicios">
+        <h2>Servicios</h2>
+        <article>
+            <h3>Artículo 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nostrum modi quos doloribus ipsum veniam, error hic consequuntur, voluptatibus soluta maxime incidunt rerum dolor asperiores nemo saepe? Magnam, tempore quas.</p>
+        </article>
+        <article>
+            <h3>Artículo 2</h3>
+            <p>Eum at, excepturi aliquid iste, ad odit optio aspernatur consequatur sint necessitatibus et recusandae adipisci veritatis consectetur! Excepturi quo quod eaque eius laboriosam non molestiae pariatur incidunt. Aliquam, consectetur blanditiis.</p>
+        </article>
+        <article>
+            <h3>Artículo 3</h3>
+            <p>Repellat numquam dicta accusamus nisi? Odio tempora, iusto molestiae possimus enim exercitationem repellat ducimus aspernatur fugiat nostrum vitae eaque nam voluptates eum dolor nemo maiores veritatis delectus, aliquid quod repudiandae.</p>
+        </article>
+    </section>
+
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

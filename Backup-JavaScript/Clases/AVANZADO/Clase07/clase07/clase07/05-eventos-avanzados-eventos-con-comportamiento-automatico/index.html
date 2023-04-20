@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos con comportamiento automático</title>
+</head>
+<body>
+    <h1>Eventos con comportamiento automático</h1>
+    <ul>
+        <li><a href="https://google.com">Ir a Google</a></li>
+        <li><a id="link-cancelado" href="https://google.com">Ir a Google</a> (cancelado)</li>
+        <li><a id="link-confirmado" href="https://google.com">Ir a Google</a> (confirmado)</li>
+        <li><a id="link-con-demora" href="https://google.com">Ir a Google</a> (con demora)</li>
+    </ul>
+    <div id="informacion"></div>
+    <script>
+
+        document.getElementById('link-cancelado').addEventListener('click', e => {
+            e.preventDefault();
+        });
+
+        document.getElementById('link-confirmado').addEventListener('click', e => {
+            if (!confirm('¿Querés ir a Google?')) {
+                e.preventDefault();
+            }
+        });
+
+        document.getElementById('link-con-demora').addEventListener('click', e => {
+            e.preventDefault();
+            let segundosRestantes = 3;
+            const divInformacion = document.getElementById('informacion');
+            divInformacion.textContent = `Redirigiendo a Google en ${segundosRestantes} segundos...` ;
+            setInterval(() => {
+                console.log(segundosRestantes);
+                segundosRestantes--;
+                divInformacion.textContent = `Redirigiendo a Google en ${segundosRestantes} segundos...` ;
+                console.log('pasó 1 segundo')
+                if (segundosRestantes === 0) {
+                    window.location = 'https://google.com.ar';
+                }
+            }, 1000);
+        });
+
+
+    </script>
+</body>
+</html>

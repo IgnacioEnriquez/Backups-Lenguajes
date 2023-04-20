@@ -1,0 +1,53 @@
+
+Modificar la cantidad de resultados por defecto:
+
+(deprecado)
+DBQuery.shellBatchSize = 300
+
+
+Modificar un producto a partir de cualquier campo: (se modifica el primero del resultado, del cual pueden haber varios)
+db.products.updateOne({name: 'TV'}, {$set: {description: 'color azul'}})
+
+Modificar un producto por su ObjectId:
+db.products.updateOne({_id: ObjectId("6359f978bd5338a08c512d10")}, {$set: {description: 'color azul'}})
+
+Modificar todos los productos que coincidan con el criterio de búsqueda:
+db.products.updateMany({name: 'TV'}, {$set: {description: 'color azul'}})
+
+Modificar todos los documentos:
+db.clientes.updateMany({}, {$set: {tieneDescuento: false}})
+
+
+Eliminar el primer documento que coincida con la búsqueda:
+db.products.deleteOne({name: 'pelota azul'})
+
+Eliminación por ObjectId:
+db.products.deleteOne({_id: ObjectId("63471d9fc64a4ebaaff1649c")})
+
+Eliminar todos los documentos que coincidan con la búsqueda:
+db.products.deleteMany({name: 'pelota azul'})
+
+
+
+Proyección:
+
+Traer solo name e _id:
+db.products.find({}, {name: 1})
+
+Traer solo name, price e _id:
+db.products.find({}, {name: 1, price: 1})
+
+Traer todo, excepto warranty e _id:
+db.products.find({}, {warranty: 0, _id: 0})
+
+Traer solo name:
+db.products.find({}, {name: 1, _id: 0})
+
+
+Eliminar una colección:
+db.nombre_coleccion.drop()
+Retorna true si se eliminó, false en caso contrario
+
+Eliminar la base de datos en uso actualmente:
+db.dropDatabase()
+

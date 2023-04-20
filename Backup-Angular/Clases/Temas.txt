@@ -1,0 +1,3 @@
+Clase 1 - Routing, Rutas
+Clase 2 - Angular Basico, NG MODEL
+Clase 3 - Ruta Acerca de - Directivas simples - Input y Output - Eventos 

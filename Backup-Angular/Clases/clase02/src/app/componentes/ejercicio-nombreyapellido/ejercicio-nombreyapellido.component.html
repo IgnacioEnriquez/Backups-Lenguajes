@@ -1,0 +1,15 @@
+<h4>Nombre 1</h4>
+<input type="text" [(ngModel)]="nombre">
+{{nombre}}
+
+<h4>Nombre 2</h4>
+<input type="text" [(ngModel)]="apellido">
+{{apellido}}
+
+<h4>Resultado</h4>
+<input type="text" disabled [(ngModel)]="resultado">
+<h2>Nombre y Apellido : {{resultado}}</h2>
+<br>
+
+<button (click)="limpiar()">Limpiar</button>
+<button (click)="concatenar()">Concatenar</button>

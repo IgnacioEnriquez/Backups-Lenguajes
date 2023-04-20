@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notación de corchetes para el acceso a propiedades</title></head>
+<body>
+    <h1>Notación de corchetes para el acceso a propiedades</h1>
+
+    <script> 
+        const obj = {
+            firstName: 'Alan',
+            lastName: 'Anderson',
+            age: 42,
+            city: 'Brasilia',
+            child1: 'Miguel',
+            child2: 'Rosario',
+            child3: 'Santiago',
+            child4: 'Pilar',
+            child5: 'Matías',
+            child6: 'Lucía',
+        };
+
+        console.log('obj.firstName:', obj.firstName);
+        console.log('obj.lastName:', obj.lastName);
+        console.log('obj.age:', obj.age);
+        console.log('obj.city:', obj.city);
+        console.log('obj.child1:', obj.child1);
+        console.log('obj.child2:', obj.child2);
+        console.log('obj.child3:', obj.child3);
+        console.log('obj.child4:', obj.child4);
+        console.log('obj.child5:', obj.child5);
+        console.log('obj.child6:', obj.child6);
+        console.log('-----');
+        
+
+        console.log(obj['firstName']);
+        console.log(obj['last' + 'Na' + 'me']);
+        console.log(obj['lastName']);
+        const edad = 'age';
+        console.log(obj[edad]);
+        const ciudad = 'city';
+        console.log(obj[ciudad]);
+        console.log('-----');
+        
+        for (let i = 1; i < 7; i++) {
+            console.log(obj['child' + i]);
+        }
+        
+
+    </script>
+</body>
+</html>

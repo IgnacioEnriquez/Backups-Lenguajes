@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos con distintas referencias</title>
+</head>
+<body>
+    <h1>Objetos con distintas referencias</h1>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Glossary/Primitive" target="_blank">Tipos de datos primitivos en MDN</a></p>
+
+    <script>
+        // Algunos de los tipos de datos primitivos de ECMAScript:
+        let numero = 2;
+        const texto = '2';
+        const booleano = true;
+        console.log(typeof numero);     // number (primitivo)
+        console.log(typeof texto);      // texto (primitivo)
+        console.log(typeof booleano);   // boolean (primitivo)
+
+        const copiaNumero = numero;
+        console.log('numero:', numero);
+        console.log('copiaNumero:', copiaNumero);
+        
+        numero = 33;
+        console.log('numero:', numero);
+        console.log('copiaNumero:', copiaNumero);
+        
+
+        console.warn('-----');
+
+        // Algunos objetos:
+        const miArray = [10, 20, 30];
+        console.log(typeof miArray);    // object (NO primitivo)
+        
+        miArray.push(40);
+        // console.log(miArray.length);
+        const a = miArray;
+        const b = miArray;
+        console.log('miArray:', miArray);
+        console.log('a:', a);
+        console.log('b:', b);
+        
+        miArray.push(50, 60, 70);
+        console.log('miArray:', miArray);
+        console.log('a:', a);
+        console.log('b:', b);
+
+        b.push(80, 90, 100);
+        console.log('miArray:', miArray);
+        console.log('a:', a);
+        console.log('b:', b);
+
+        
+    </script>
+</body>
+</html>

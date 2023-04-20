@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.box {
+    color: #fff;
+    padding: 20px;
+    margin: 20px;
+    display: block;
+    text-align: center;
+    font-weight: 700;
+}
+
+#uno {
+    width: 250px;
+    margin: 20px auto;
+    background-color: #095256;
+}
+
+#dos {
+    background-color: #087f8c;
+}
+
+#tres {
+    background-color: #5aaa95;
+}

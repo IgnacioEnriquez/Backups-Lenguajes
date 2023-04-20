@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truthy y falsy values</title>
+</head>
+<body>
+    <h1>Truthy y falsy values</h1>
+    <a href="https://developer.mozilla.org/en-US/docs/Glossary/Truthy" target="_blank">Truthy en MDN</a>
+    <a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy" target="_blank">Falsyy en MDN</a>
+    <script>
+        console.warn('Truthy values');
+        if ('Texto') { console.log('truthy'); } else { console.error('falsy'); }
+        if ('123') { console.log('truthy'); } else { console.error('falsy'); }
+        if (' ') { console.log('truthy'); } else { console.error('falsy'); }
+        if ('!!!') { console.log('truthy'); } else { console.error('falsy'); }
+        if ('222') { console.log('truthy'); } else { console.error('falsy'); }
+        if ('false') { console.log('truthy'); } else { console.error('falsy'); }
+        if ('undefined') { console.log('truthy'); } else { console.error('falsy'); }
+        if ('null') { console.log('truthy'); } else { console.error('falsy'); }
+        if ('0') { console.log('truthy'); } else { console.error('falsy'); }
+        if (400) { console.log('truthy'); } else { console.error('falsy'); }
+        if (30) { console.log('truthy'); } else { console.error('falsy'); }
+        if (5) { console.log('truthy'); } else { console.error('falsy'); }
+        if (-545) { console.log('truthy'); } else { console.error('falsy'); }
+        if (Infinity) { console.log('truthy'); } else { console.error('falsy'); }
+        if (true) { console.log('truthy'); } else { console.error('falsy'); }
+        const codigo = 40;
+        const nombre = 'Mariano';
+        if (codigo) { console.log('truthy'); } else { console.error('falsy'); }
+        if (nombre) { console.log('truthy'); } else { console.error('falsy'); }
+        
+        console.warn('Falsy values');
+        if ('') { console.log('truthy'); } else { console.error('falsy'); }
+        if (0) { console.log('truthy'); } else { console.error('falsy'); }
+        if (0.0) { console.log('truthy'); } else { console.error('falsy'); }
+        if (-0) { console.log('truthy'); } else { console.error('falsy'); }
+        if (NaN) { console.log('truthy'); } else { console.error('falsy'); }
+        if (null) { console.log('truthy'); } else { console.error('falsy'); }
+        if (undefined) { console.log('truthy'); } else { console.error('falsy'); }
+        if (false) { console.log('truthy'); } else { console.error('falsy'); }
+        const saldo = 0;
+        if (saldo) { console.log('truthy'); } else { console.error('falsy'); }
+
+    </script>
+</body>
+</html>
