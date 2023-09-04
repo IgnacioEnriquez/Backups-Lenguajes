@@ -1,0 +1,6 @@
+ng serve --port 4200 -o // corre la aplicación en el puerto 4200 y abre el navegador con la aplicación
+ng g c components/mi-componente // genero un componente en la ruta components/mi-componente
+ng g s services/mi-servicio // genero un servicio en la ruta services/ llamado mi-servicio
+ng g m components/mi-componente // genero un módulo dentro de components/mi-componente
+ng g m app-routing --flat --module=app // genera un módulo de routing en la base del proyecto con el nombre app-routing
+ng generate module admin --route admin --module app.module // Genera el modulo deseado con el nombre deseado

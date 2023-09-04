@@ -1,0 +1,29 @@
+     
+      <div class="table-responsive">
+        <h2>Listado De Actores</h2>
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Edad</th>
+              <th scope="col">Genero</th>
+              <th scope="col">Nacionalidad</th>
+              <th scope="col">Pelicula Mas Conocida</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let actor of array_actores">
+              <td>{{actor.nombre}}</td>
+              <td>{{actor.apellido}}</td>
+              <td>{{actor.edad}}</td>
+              <td>{{actor.genero}}</td>
+              <td>{{actor.nacionalidad}}</td>
+              <td>{{this.obtenerPeliculaID(actor.peliculaMasConocidaID)}}</td>
+              <td><a (click)="enviarDetalle(actor)" class="btn btn-primary">Seleccionar</a></td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>

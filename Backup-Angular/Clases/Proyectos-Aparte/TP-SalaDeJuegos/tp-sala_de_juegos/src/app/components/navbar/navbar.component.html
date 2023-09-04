@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+    <a class="navbar-brand">
+      <img src="../assets/logo-sala-de-juegos.png" alt="Bootstrap" width="150" height="68">
+    </a>
+    
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav me-auto mb-2 mb-md-0">
+        <div class="btn-group">
+          <a routerLink="/home" class="btn btn-warning">Home</a>
+          <a routerLink="/quien-soy" class="btn btn-warning">Quien Soy</a> 
+        </div>
+      </div> 
+    
+      
+      <div *ngIf="!usuario_registrado; else logout" class="d-grid gap-2 d-md-flex justify-content-md-end">   
+        <button routerLink="/registro"  class="btn btn-outline-warning">Registrarse</button>
+        <button routerLink="/login"  class="btn btn-outline-warning">Iniciar Sesion</button>  
+    </div>
+    
+        <ng-template #logout>
+            <div class="alert-bienvenido alert alert-warning" role="alert">
+                Bienvenido {{this.nombre_usuario}}.
+              </div>
+            <button (click)="cerrarSesion()"  class="btn btn-outline-danger">Logout</button>
+        </ng-template>
+       
+    
+    </div>
+    </div>
+</nav>

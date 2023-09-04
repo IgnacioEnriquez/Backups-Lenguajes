@@ -1,0 +1,12 @@
+<div class="container" >
+
+  <img [src]="bandera_pred" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Seleccion su Nacionalidad</h5>
+    <select class="form-select" [(ngModel)]="select_paises" (ngModelChange)="selectCambio()" aria-label="Default select example">
+      <option value="OrdenJedi">Predeterminado</option>
+      <option [value]="pais.name.common" *ngFor="let pais of array_paises">{{pais.name.common}}</option>
+    </select>
+  </div>
+
+</div>

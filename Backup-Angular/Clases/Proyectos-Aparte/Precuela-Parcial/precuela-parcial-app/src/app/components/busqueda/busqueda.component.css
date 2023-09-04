@@ -1,0 +1,13 @@
+.separador-opciones
+{
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.separador-opciones .detalle-pelicula
+{
+    width: 300px;
+    height: 300px;   
+}

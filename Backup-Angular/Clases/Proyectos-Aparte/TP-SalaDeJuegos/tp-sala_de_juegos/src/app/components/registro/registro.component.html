@@ -1,0 +1,19 @@
+<div class="text-center body">        
+<main class="form-signin w-100 m-auto">  
+
+    <img class="mb-4" src="../../../assets/logo-sala-de-juegos.png" alt="" width="200" height="100">
+    <h1 class="h3 mb-3 fw-normal">Registro</h1>
+
+    <div class="form-floating">
+      <input type="email" [(ngModel)]="email" class="form-control"  placeholder="name@example.com">    
+      <label for="floatingInput">Direccion de Email</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" [(ngModel)]="contrasenia" class="form-control"  placeholder="Contrasenia">
+      <label for="floatingPassword">Contraseña</label>
+    </div>
+
+    <button (click)="registrar()" class="w-100 btn btn-lg btn-warning">Registrarse</button>
+    <p class="mt-5 mb-3 text-body-secondary">&copy; 2023</p> 
+</main>    
+</div>

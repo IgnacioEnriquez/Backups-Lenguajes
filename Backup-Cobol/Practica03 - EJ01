@@ -1,0 +1,30 @@
+      ******************************************************************
+      * Author: Enriquez Ignacio
+      * Date: 2/6/2023
+      * Purpose: Cobol Training Practice
+      * Tectonics: cobc
+      ******************************************************************
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. EJERCICIO01-ENRIQUEZ.
+
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SPECIAL-NAMES.
+           DECIMAL-POINT IS COMMA.
+
+       DATA DIVISION.
+       FILE SECTION.
+       WORKING-STORAGE SECTION.
+       01 numero-natural PIC 99 VALUE 0.
+
+       PROCEDURE DIVISION.
+       MAIN-PROCEDURE.
+
+       PERFORM SUMADOR-NATURALES UNTIL numero-natural = 10.
+       STOP RUN.
+
+       SUMADOR-NATURALES.
+           ADD 1 TO numero-natural
+           DISPLAY numero-natural.
+
+       END PROGRAM EJERCICIO01-ENRIQUEZ.

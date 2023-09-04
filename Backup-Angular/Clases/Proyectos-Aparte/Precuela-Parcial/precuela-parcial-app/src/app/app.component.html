@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+  <div class="container">
+    <a class="navbar-brand">PP-APP</a>    
+
+    <div class="collapse navbar-collapse" id="navbarsExample07">
+
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/bienvenido" aria-current="page">Bienvenido</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="busqueda" aria-current="page" >Busqueda</a>
+        </li>  
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">Peliculas</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="/pelicula/alta">Alta</a></li>
+            <li><a class="dropdown-item" routerLink="/pelicula/listado">Listado</a></li>
+        </ul>
+        </li>      
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle"  data-bs-toggle="dropdown" aria-expanded="false">Actor</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" routerLink="actor/alta" >Alta</a></li>
+            <li><a class="dropdown-item" routerLink="actor/listado">Listado</a></li>
+            <li><a class="dropdown-item" routerLink="actor/pelicula">Actor y Peliculas</a></li>
+
+          </ul>
+        </li>
+      </ul>
+      <!-- <form role="search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form> -->
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

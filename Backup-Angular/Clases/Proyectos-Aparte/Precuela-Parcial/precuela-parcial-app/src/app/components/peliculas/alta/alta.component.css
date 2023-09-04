@@ -1,0 +1,19 @@
+.input-date
+{
+    display:block;
+    height: 37.6px;
+    width: 100%;
+    padding: .375rem .75rem;
+    border-radius: 5px;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+.form-datos-pelicula
+{
+    padding: 20px;
+}
+
+.button-agregar-actor
+{
+    margin-top: 20px;
+}

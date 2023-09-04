@@ -1,0 +1,29 @@
+
+<div class="container py-4">   
+    <div class="mb-4 bg-body-tertiary rounded-3">
+      <div class="container-fluid ">
+        <app-actorListado (enviarDetalleActor)="actualizarDetalle($event)"></app-actorListado>
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div class="col-4">
+     
+          <app-detalle-actor [actor_seleccionado]="actor_seleccionado"></app-detalle-actor>
+   
+      </div>
+      <div class="col-4">   
+        <app-detalle-paises [datos_nacionalidad]="informacion_nacionalidad"></app-detalle-paises>
+
+      </div>
+        <div class="col-4">
+          <app-detalle-pelicula [pelicula_seleccionada]="peliculaSelecionada"></app-detalle-pelicula>
+
+         
+      </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-body-secondary border-top">
+      &copy; 2023
+    </footer>
+  </div>

@@ -1,0 +1,140 @@
+<div class="container">
+
+  <form [formGroup]="form_actor" (ngSubmit)="agregarActor()">
+
+    <!--Titulo de Formulario  -->
+    <div class="py-5 text-center">
+      <h2>Alta de Actor</h2>
+      <p class="lead">En este formulario se realizara la alta del actor</p>
+    </div>
+
+    <div class="row">
+
+      <!--Inputs Con Sus tamaños -->
+      <div class="col-9">
+
+        <div class="row">
+          <!-- Titulo Form -->
+          <div class="col-12">
+           <h4 class="mb-3">Datos Principales</h4>
+          </div>
+
+          <!-- Input Nombre -->
+          <div class="col-6 inputs-form">
+            <label  class="form-label">Nombre</label>
+            <input  type="text" class="form-control" id="nombre"  placeholder="Ingrese el Nombre" formControlName="nombre">
+            <small class="invalid" 
+            *ngIf="form_actor.controls.nombre.errors?.required &&
+            form_actor.controls.nombre.touched">
+            El nombre es requerido
+            </small>   
+            <small class="invalid" 
+            *ngIf="form_actor.controls.nombre.errors?.containsSpaces &&
+            form_actor.controls.nombre.touched">
+            El nombre no puede contener espacios
+            </small>      
+          </div>
+
+          <!-- Input Apellido -->
+          <div class="col-6 inputs-form">
+            <label  class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido"  placeholder="Ingrese el Apellido" formControlName="apellido">
+            <small class="invalid" 
+            *ngIf="form_actor.controls.apellido.errors?.required &&
+            form_actor.controls.apellido.touched">
+            El apellido es requerido
+            </small>  
+
+            <small class="invalid" 
+            *ngIf="form_actor.controls.apellido.errors?.containsSpaces &&
+            form_actor.controls.apellido.touched">
+            El apellido no puede contener espacios
+            </small>
+          </div>
+
+          <!-- Input Edad -->
+          <div class="col-6 inputs-form ">
+            <label class="form-label">Edad</label>
+            <input type="number" class="form-control" id="edad" placeholder="Ingrese edad" formControlName="edad" >
+
+            <small class="invalid"
+            *ngIf="form_actor.controls.edad.errors?.required &&
+            form_actor.controls.edad.touched">
+            La edad es requerida
+            </small>
+
+            <small class="invalid"
+            *ngIf="form_actor.controls.edad.errors?.min || 
+            form_actor.controls.edad.errors?.max &&
+            form_actor.controls.edad.touched">
+            La edad debe ser de 18 a 100 años
+            </small>
+              
+          </div>
+
+          <!-- Input Cant Publico -->
+          <div class="col-6 inputs-form ">
+            <label class="form-label">Cantidad de Publico en su Estreno</label>
+            <input type="number" class="form-control" id="cantidadPublico" placeholder="Ingrese la Cantidad de Publico" formControlName="cantidadPublico" >
+
+            <small class="invalid"
+            *ngIf="form_actor.controls.cantidadPublico.errors?.required &&
+            form_actor.controls.cantidadPublico.touched">
+            La cantidad de publico es requerida
+            </small>
+
+            <small class="invalid"
+            *ngIf="form_actor.controls.cantidadPublico.errors?.min || 
+            form_actor.controls.cantidadPublico.errors?.max &&
+            form_actor.controls.cantidadPublico.touched">
+            La cantidad de publico debe ser de 1 a 10000000 personas
+            </small>
+              
+          </div>
+
+          <!-- Input Genero -->
+          <div class="col-6 inputs-form ">
+            <label  class="form-label">Genero</label>
+                <select class="form-select" id="genero" formControlName="genero">
+                  <option value="">Seleccione uno</option>
+                  <option>Masculino</option>
+                  <option>Femenino</option>
+                  <option>Otro</option>
+                </select>
+          </div>
+
+          <!-- Input Pelicula Mas Conocida -->
+          <div class="col-6 inputs-form ">
+            <label  class="form-label">Pelicula Mas Conocida</label>
+                <select [(ngModel)]="selectPeliculaDefault" class="form-select" id="peliculaMasConocida" formControlName="peliculaMasConocida">
+                  <option value="Ninguna">Ninguna Pelicula Es Conocida</option>
+                  <option  *ngFor="let pelicula of array_peliculas" value={{pelicula.id}}>{{pelicula.nombre}}</option>    
+                </select>
+          </div>      
+        </div>
+
+      </div>
+
+      <!-- Card Nacionalidad con Component -->
+      <div class="col-3">
+        <div class="card" style="width: 20rem;">
+          <app-tabla-paises (selectCambio_event)="guardar_nacionalidad($event)"></app-tabla-paises>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button Submit Form -->
+    <div class="row">
+      <div class="col-12">
+        <button type="submit" 
+          class="btn btn-primary btn-lg" 
+          [disabled]="form_actor.invalid">
+          Agregar Nuevo Producto
+        </button>
+      </div>
+    </div>
+  </form>
+
+
+
+</div>

@@ -1,0 +1,105 @@
+<div class="container">
+
+    <form [formGroup]="form_pelicula" (ngSubmit)="agregarPelicula()">
+
+        <!--Titulo de Formulario  -->
+        <div class="py-5 text-center">
+            <h2>Alta de Pelicula</h2>
+            <p class="lead">En este formulario se realizara la alta de la Pelicula</p>
+        </div>
+
+        <div class="row">
+
+            <!--Inputs Con Sus tamaños -->
+            <div class="col-9">
+
+                <div class="row">
+                    <!-- Titulo Form -->
+                    <div class="col-12">
+                        <h4 class="mb-3">Datos Principales</h4>
+                    </div>
+
+                    <!-- Input Nombre -->
+                    <div class="col-6 inputs-form">
+                        <label class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese el Nombre"
+                            formControlName="nombre">
+                        <small class="invalid" *ngIf="form_pelicula.controls.nombre.errors?.required &&
+              form_pelicula.controls.nombre.touched">
+                            El nombre es requerido
+                        </small>
+                        <small class="invalid" *ngIf="form_pelicula.controls.nombre.errors?.containsSpaces &&
+              form_pelicula.controls.nombre.touched">
+                            El nombre no puede contener espacios
+                        </small>
+                    </div>
+
+                    <!-- Input Cantidad de Publico -->
+                    <div class="col-6 inputs-form ">
+                        <label class="form-label">Ingrese la cantidad de publico del estreno</label>
+                        <input type="number" class="form-control" id="cantidadPublico"
+                            placeholder="Ingrese la cantidad de publico" formControlName="cantidadPublico">
+
+                        <small class="invalid" *ngIf="form_pelicula.controls.cantidadPublico.errors?.required &&
+              form_pelicula.controls.cantidadPublico.touched">
+                            La cantidad de publico es requerida
+                        </small>
+
+                        <small class="invalid" *ngIf="form_pelicula.controls.cantidadPublico.errors?.min || 
+              form_pelicula.controls.cantidadPublico.errors?.max &&
+              form_pelicula.controls.cantidadPublico.touched">
+                            La cantidad de publico debe ser de 18 a 100 años
+                        </small>
+
+                    </div>
+
+                    <!-- Input Tipo de Pelicula -->
+                    <div class="col-6 inputs-form ">
+                        <label class="form-label">Tipo de Pelicula</label>
+                        <select class="form-select" id="tipo" formControlName="tipo">
+                            <option value="Terror">Terror</option>
+                            <option value="Comedia">Comedia</option>
+                            <option value="Amor">Amor</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Accion">Accion</option>
+                        </select>
+                    </div>
+
+                    <div class="col-6 inputs-form">
+                        <label class="form-label">Fecha de Estreno</label>
+                        <input class="input-date form-control" type="date" id="fechaEstreno"
+                        placeholder="Ingrese la fecha de estreno" formControlName="fechaEstreno"/>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Card Nacionalidad con Component -->
+            <div class="col-3">
+                <div class="card" style="width: 20rem;">
+                    <img src="../../../../assets/argentina-1985.jpg" width="100%" height="250px">
+                    <div class="card-body">
+                        <h5 class="card-title">Seleccion su Nacionalidad</h5>
+                        <select class="form-select" aria-label="Default select example">
+                            <option value="OrdenJedi">Predeterminado</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button Submit Form -->
+        <div class="row">
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary btn-lg" [disabled]="form_pelicula.invalid">
+                    Agregar Nueva Pelicula
+                </button>
+            </div>
+        </div>
+
+
+    </form>
+
+
+
+</div>

@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{pelicula_seleccionada.nombre}}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">ID : {{pelicula_seleccionada.id}}</h6>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Tipo de Pelicula : {{pelicula_seleccionada.tipo.toString()}} </li>
+        <li class="list-group-item">Fecha de Estreno : {{pelicula_seleccionada.fechaEstreno.toLocaleDateString()}} </li>
+        <li class="list-group-item">Cantidad de Publico : {{pelicula_seleccionada.cantidadPublico}} </li>
+      </ul>
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<div class="cards-espacio">   
+  <h1 class="card-title text-center">Lista de Elementos</h1>
+  <div class=".container">
+    <div class="row row-cols-4">
+      <div class="col" *ngFor="let pelicula of array_peliculas">
+        <div class="card h-100">
+          <img class="card-img-top" width="100%" height="250" src="{{pelicula.pathFoto}}"
+            class="card-img-top imagen-listado" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title">{{pelicula.nombre}}</h5>
+            <a (click)="enviarDetalle(pelicula)" class="btn btn-primary">Seleccionar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
